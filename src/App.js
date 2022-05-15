@@ -1,13 +1,14 @@
-import "./App.css";
+import styled from "styled-components";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>테스트</h1>
-        <h1>테스트!!</h1>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Main />
+    </>
   );
 }
 
