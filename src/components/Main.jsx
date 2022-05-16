@@ -6,12 +6,14 @@ import Image from "./Image";
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
+import Wave from "./Wave";
 const Main = () => {
   return (
     <>
       <MainContainer>
         <Header />
         <LandingPage />
+        <Wave />
         <About />
         <Work />
         <Contact />
@@ -29,13 +31,14 @@ const MainContainer = styled.div`
   min-height: 100vh;
   background-color: white;
   display: flex;
+  overflow-x: hidden;
   flex-direction: column;
   /* padding-right: 80px;
   padding-left: 80px; */
   @media (max-width: 768px) {
      {
       width: 93%;
-      border: 1px solid blue;
+      /* border: 1px solid blue; */
     }
   }
 `;

@@ -10,5 +10,8 @@ const GlobalStyle = createGlobalStyle`
         /* background-color:  #013987; */
         box-sizing: border-box;
     };
+    *{
+        box-sizing: border-box;
+    }
 `;
 export default GlobalStyle;

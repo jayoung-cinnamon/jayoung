@@ -20,17 +20,18 @@ export default Header;
 const Container = styled.div`
   margin: 0 auto;
   width: 85%;
+
   /* max-width: 768px; */
   min-width: 320px;
   /* padding-right: 80px;
   padding-left: 80px; */
+  /* border: 1px solid red; */
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: white;
   position: fixed;
-  border: 1px solid red;
   top: 0;
   left: 0;
   right: 0;
@@ -38,7 +39,6 @@ const Container = styled.div`
   @media (max-width: 768px) {
      {
       width: 93%;
-      border: 1px solid blue;
       height: 40px;
     }
   }
