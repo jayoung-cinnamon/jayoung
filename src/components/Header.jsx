@@ -28,6 +28,11 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: white;
+  position: fixed;
+  border: 1px solid red;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
 const Logo = styled.div`

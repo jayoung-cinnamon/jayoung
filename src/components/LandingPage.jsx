@@ -6,6 +6,7 @@ const LandingPage = () => {
       <MainText>
         <h1>{"CREATIVE FRONTEND DEVELOPER.\nBASED IN SEOUL."}</h1>
       </MainText>
+      <Arrow />
     </Container>
   );
 };
@@ -18,8 +19,11 @@ const Container = styled.div`
   height: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid rebeccapurple;
+  position: relative;
 `;
 
 const MainText = styled.div`
@@ -31,4 +35,14 @@ const MainText = styled.div`
   line-height: 147%;
   letter-spacing: 10px;
   width: 70%;
+`;
+
+const Arrow = styled.div`
+  width: 20px;
+  height: 56px;
+  background-image: url("/images/curlyArrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 30px;
 `;
