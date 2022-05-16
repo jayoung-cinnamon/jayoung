@@ -19,10 +19,11 @@ export default Header;
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 1440px;
+  width: 85%;
+  /* max-width: 768px; */
   min-width: 320px;
-  padding-right: 80px;
-  padding-left: 80px;
+  /* padding-right: 80px;
+  padding-left: 80px; */
   height: 50px;
   display: flex;
   align-items: center;
@@ -33,6 +34,14 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+  @media (max-width: 768px) {
+     {
+      width: 93%;
+      border: 1px solid blue;
+      height: 40px;
+    }
+  }
 `;
 
 const Logo = styled.div`
@@ -43,6 +52,11 @@ const Logo = styled.div`
 
 const Menu = styled.div`
   display: flex;
+  @media (max-width: 768px) {
+     {
+      display: none;
+    }
+  }
 `;
 
 const Item = styled.div`
