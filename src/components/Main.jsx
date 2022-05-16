@@ -4,10 +4,12 @@ import Header from "./Header";
 import LandingPage from "./LandingPage";
 const Main = () => {
   return (
-    <MainContainer>
+    <>
       <Header />
-      <LandingPage />
-    </MainContainer>
+      <MainContainer>
+        <LandingPage />
+      </MainContainer>
+    </>
   );
 };
 export default Main;
@@ -19,11 +21,8 @@ const MainContainer = styled.div`
   min-height: 100vh;
   height: 100%;
   background-color: white;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   padding-right: 80px;
   padding-left: 80px;
-  /* justify-content: center;
-  align-items: center; */
-  /* padding: 10px; */
-  border: 1px solid blue; ;
 `;
