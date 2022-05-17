@@ -19,7 +19,7 @@ export default Header;
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 85%;
+  width: 90%;
 
   /* max-width: 768px; */
   min-width: 320px;

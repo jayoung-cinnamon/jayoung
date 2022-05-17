@@ -13,7 +13,7 @@ const Main = () => {
       <MainContainer>
         <Header />
         <LandingPage />
-        <Wave />
+        {/* <Wave /> */}
         <About />
         <Work />
         <Contact />
@@ -25,7 +25,7 @@ export default Main;
 
 const MainContainer = styled.div`
   margin: 0 auto;
-  width: 85%;
+  width: 90%;
   /* max-width: 768px; */
   min-width: 320px;
   min-height: 100vh;

@@ -3,9 +3,12 @@ import styled from "styled-components";
 const Wave = () => {
   return (
     <Container>
-      <Circle1 />
-      <Circle2 />
-      <Circle3 />
+      <section>
+        <Wave1 className="wave wave1" />
+        <Wave2 className="wave wave2" />
+        <Wave3 className="wave wave3" />
+        <Wave4 className="wave wave4" />
+      </section>
     </Container>
   );
 };
@@ -24,6 +27,69 @@ const Container = styled.div`
   justify-content: space-between;
   bottom: 0;
   position: relative;
+
+  section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3586ff;
+    overflow: hidden;
+  }
+
+  & > section > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://i.postimg.cc/YqcvK11W/wave.png);
+    background-size: 1000px 100px;
+    border: 1px solid red;
+  }
+  section .wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  section .wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  section .wave3 {
+    animation: animate3 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: 2s;
+    bottom: 15px;
+  }
+  section .wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  @keyframes animate {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: -1000px;
+    }
+  }
   @media (max-width: 768px) {
      {
       border: 1px solid blue;
@@ -31,67 +97,7 @@ const Container = styled.div`
   }
 `;
 
-const Circle1 = styled.div`
-  width: 50%;
-  height: 280px;
-  background-color: #0f60d185;
-  /* position: absolute; */
-  border-radius: 50%;
-  z-index: 1;
-  /* left: -200px; */
-  animation: wave 2s normal infinite linear;
-
-  @keyframes wave2 {
-    0% {
-      transform: translateY(3%);
-      /* translateZ(0.1px) rotate(0deg); */
-    }
-
-    100% {
-      transform: translateY(-10%);
-      /* translateZ(0.1px) rotate(360deg); */
-    }
-  }
-`;
-const Circle2 = styled.div`
-  width: 50%;
-  height: 300%;
-  position: relative;
-  background-color: #0f60d1b7;
-  border-radius: 50%;
-  top: 0;
-  z-index: 3;
-  animation: wave2 3s normal infinite linear;
-
-  @keyframes wave2 {
-    0% {
-      transform: translateY(1%);
-      /* translateZ(0.1px) rotate(0deg); */
-    }
-
-    100% {
-      transform: translateY(-10%);
-      /* translateZ(0.1px) rotate(360deg); */
-    }
-  }
-`;
-
-const Circle3 = styled.div`
-  width: 50%;
-  height: 300px;
-  background-color: #0f60d139;
-  border-radius: 50%;
-  z-index: 2;
-  animation: wave2 2s normal infinite linear;
-  @keyframes wave3 {
-    0% {
-      transform: translateY(3%);
-      /* translateZ(0.1px) rotate(0deg); */
-    }
-
-    100% {
-      transform: translateY(-10%);
-      /* translateZ(0.1px) rotate(360deg); */
-    }
-  }
-`;
+const Wave1 = styled.div``;
+const Wave2 = styled.div``;
+const Wave3 = styled.div``;
+const Wave4 = styled.div``;
