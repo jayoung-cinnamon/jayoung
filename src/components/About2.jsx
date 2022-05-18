@@ -6,14 +6,11 @@ const About2 = () => {
     setClickHeart(!clickHeart);
   };
 
-  useEffect(() => {
-    console.log("clickHeart", clickHeart);
-  }, [clickHeart]);
   return (
     <Container>
       <Screen>
         <Profile>
-          <Logo />
+          <Logo heart={clickHeart} />
           <NameContainer>
             <NameTag>jayoung</NameTag>
             <EmailTag>coffeejayoung@gamil.com</EmailTag>
@@ -91,7 +88,7 @@ const Profile = styled.div`
 const Logo = styled.div`
   width: 90px;
   height: 90px;
-  background-image: url("/images/smile.png");
+  background-image: url("/images/ProfileSmile.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 20px;
@@ -100,6 +97,12 @@ const Logo = styled.div`
     height: 45px;
     margin-right: 10px;
   }
+  ${(props) =>
+    props.heart &&
+    css`
+      background-image: url("/images/smile.png");
+      animation: none;
+    `}
 `;
 
 const NameContainer = styled.div`
@@ -195,7 +198,7 @@ const EmptyHeart = styled.div`
     height: 25px;
   }
 
-  animation: bigger 0.5s infinite ease-in-out;
+  animation: bigger 1s infinite ease-in-out;
 
   @keyframes bigger {
     from {

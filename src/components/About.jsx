@@ -1,14 +1,24 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { css } from "styled-components";
 import SpeechBubble from "./SpeechBubble";
 
 const About = () => {
+  const [isMouseMove, setIsMouseMove] = useState(false);
+  const handleMouseMove = (e) => {
+    setIsMouseMove(!isMouseMove);
+  };
+
+  useEffect(() => {
+    console.log("isMouseMove", isMouseMove);
+  }, []);
+
   return (
-    <Container>
+    <Container onWheel={handleMouseMove}>
       <ProfileImage />
       <MainText>{`ja++\nyoung.`}</MainText>
       <BubbleContainer>
-        <SpeechBubble />
+        <Circle rotate={isMouseMove} />
+        {/* <SpeechBubble /> */}
       </BubbleContainer>
     </Container>
   );
@@ -197,8 +207,38 @@ const BubbleContainer = styled.div`
   /* border: 2px solid blue; */
   top: 10%;
   @media (max-width: 768px) {
-     {
-      top: 13%;
+    top: 13%;
+  }
+`;
+
+const Circle = styled.div`
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 7px dotted #0f60d1;
+  position: relative;
+  animation: none;
+  top: 50%;
+  right: -500%;
+  ${(props) =>
+    props.rotate === true &&
+    css`
+      animation: rotateCircle infinite 5s ease;
+    `}
+
+  @keyframes rotateCircle {
+    from {
+      transform: rotate(0deg);
     }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    border: 3px dotted #0f60d1;
+    top: 0%;
+    right: -250%;
   }
 `;
