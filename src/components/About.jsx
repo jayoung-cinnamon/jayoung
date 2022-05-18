@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import SpeechBubble from "./SpeechBubble";
+import { useParallax } from "react-scroll-parallax";
 
 const About = () => {
+  const { ref } = useParallax({ speed: 10 });
   const [isMouseMove, setIsMouseMove] = useState(false);
   const handleMouseMove = (e) => {
     setIsMouseMove(!isMouseMove);
@@ -15,7 +17,7 @@ const About = () => {
   return (
     <Container onWheel={handleMouseMove}>
       <ProfileImage />
-      <MainText>{`ja++\nyoung.`}</MainText>
+      <MainText ref={ref}>{`ja++\nyoung.`}</MainText>
       <BubbleContainer>
         <Circle rotate={isMouseMove} />
         {/* <SpeechBubble /> */}

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
+import { useParallax } from "react-scroll-parallax";
 const About2 = () => {
+  const { ref } = useParallax({ speed: 20 });
   const [clickHeart, setClickHeart] = useState(false);
   const onClickHeart = () => {
     setClickHeart(!clickHeart);
@@ -8,7 +10,7 @@ const About2 = () => {
 
   return (
     <Container>
-      <Screen>
+      <Screen ref={ref}>
         <Profile>
           <Logo heart={clickHeart} />
           <NameContainer>

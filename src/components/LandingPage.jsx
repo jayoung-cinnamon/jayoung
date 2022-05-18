@@ -1,13 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
+import { useParallax } from "react-scroll-parallax";
 const LandingPage = () => {
-  // const [mousePosition, setMousePosition] = useState({
-  //   mouseLeft: 0,
-  //   mouseRight: 0,
-  //   mouseRad: 0,
-  // });
   const eyesRef = useRef(null);
-
+  const { ref } = useParallax({ speed: -2 });
   useEffect(() => {
     if (!eyesRef.current) return;
     window.addEventListener("mousemove", handleMouseMove);
@@ -31,7 +27,7 @@ const LandingPage = () => {
     <>
       <Container>
         <EyeContainer ref={eyesRef}>
-          <Eye>
+          <Eye ref={ref}>
             <BlackEye className="ball" />
           </Eye>
           <Eye>
@@ -40,7 +36,7 @@ const LandingPage = () => {
         </EyeContainer>
 
         <MainText>
-          <Text>CREATIVE</Text>
+          <Text> CREATIVE</Text>
           {"FRONTEND DEVELOPER."}
           <Text>BASED IN SEOUL.</Text>
         </MainText>
