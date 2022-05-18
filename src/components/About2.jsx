@@ -1,6 +1,14 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { css } from "styled-components";
 const About2 = () => {
+  const [clickHeart, setClickHeart] = useState(false);
+  const onClickHeart = () => {
+    setClickHeart(!clickHeart);
+  };
+
+  useEffect(() => {
+    console.log("clickHeart", clickHeart);
+  }, [clickHeart]);
   return (
     <Container>
       <Screen>
@@ -26,7 +34,7 @@ const About2 = () => {
 
           <IconContainer>
             <Envelope />
-            <EmptyHeart />
+            <EmptyHeart onClick={onClickHeart} heart={clickHeart} />
           </IconContainer>
         </Content>
       </Screen>
@@ -59,7 +67,7 @@ const Container = styled.div`
 `;
 
 const Screen = styled.div`
-  width: 80%;
+  width: 90%;
   height: 120%;
   background-color: #0f60d1;
   border-radius: 10px;
@@ -69,7 +77,7 @@ const Screen = styled.div`
   justify-content: space-evenly;
   @media (max-width: 768px) {
     width: 100%;
-    padding: 10px;
+    padding: 20px 10px 20px 10px;
   }
 `;
 
@@ -122,11 +130,10 @@ const EmailTag = styled(NameTag)`
 `;
 
 const Content = styled.div`
-  /* width: 100%; */
+  width: 100%;
   display: flex;
   /* border: 1px solid yellow; */
   margin-top: 20px;
-
   position: relative;
   @media (max-width: 768px) {
     margin-top: 10px;
@@ -158,6 +165,7 @@ const IconContainer = styled.div`
   align-items: center;
   @media (max-width: 768px) {
     justify-content: space-around;
+    padding-right: 10px;
   }
 `;
 
@@ -186,4 +194,22 @@ const EmptyHeart = styled.div`
     width: 25px;
     height: 25px;
   }
+
+  animation: bigger 0.5s infinite ease-in-out;
+
+  @keyframes bigger {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  cursor: pointer;
+  ${(props) =>
+    props.heart &&
+    css`
+      background-image: url("/images/Heart.png");
+      animation: none;
+    `}
 `;
