@@ -7,14 +7,16 @@ import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
 import Wave from "./Wave";
+import About2 from "./About2";
 const Main = () => {
   return (
     <>
       <MainContainer>
         <Header />
         <LandingPage />
-        {/* <Wave /> */}
+
         <About />
+        <About2 />
         <Work />
         <Contact />
       </MainContainer>
