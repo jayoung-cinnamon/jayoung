@@ -17,12 +17,6 @@ const LandingPage = () => {
   }, []);
 
   const handleMouseMove = (e) => {
-    // const eyesPosition = eyesRef.current.getBoundingClientRect();
-    // let mouseX = e.pageX;
-    // let mouseY = e.pageY;
-    // let left = eyesPosition.left - mouseX;
-    // let right = eyesPosition.right - mouseY;
-    // let rad = Math.atan2(left, right);
     let balls = document.getElementsByClassName("ball");
     let x = (e.clientX * 100) / window.innerWidth + "%";
     let y = (e.clientY * 100) / window.innerHeight + "%";
@@ -31,23 +25,18 @@ const LandingPage = () => {
       balls[i].style.left = x;
       balls[i].style.top = y;
     }
-    // setMousePosition({ mouseLeft: left, mouseRight: right, mouseRad: rad });
   };
-
-  // useEffect(() => {
-  //   console.log("mousePosition.mouseLeft", mousePosition.mouseLeft);
-  // }, [mousePosition]);
 
   return (
     <>
       <Container>
         <EyeContainer ref={eyesRef}>
-          <LeftEye>
+          <Eye>
             <BlackEye className="ball" />
-          </LeftEye>
-          <LeftEye>
+          </Eye>
+          <Eye>
             <BlackEye className="ball" />
-          </LeftEye>
+          </Eye>
         </EyeContainer>
 
         <MainText>
@@ -261,17 +250,17 @@ const Dot4 = styled.div`
 const EyeContainer = styled.div`
   position: absolute;
   top: 60%;
-  right: 12%;
+  right: 10%;
   width: 100px;
   height: 100px;
   /* border: 1px solid green; */
   display: flex;
 `;
 
-const LeftEye = styled.div`
+const Eye = styled.div`
   position: relative;
-  width: 60px;
-  height: 100px;
+  width: 50px;
+  height: 80px;
   border-radius: 100%;
   border: 1px solid black;
   background-color: white;
@@ -283,7 +272,7 @@ const BlackEye = styled.div`
   top: 0;
   left: 0;
   width: 30px;
-  height: 50px;
+  height: 40px;
   background: #000;
   border-radius: 50%;
 
