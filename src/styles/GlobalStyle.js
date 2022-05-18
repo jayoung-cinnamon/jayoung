@@ -10,6 +10,12 @@ const GlobalStyle = createGlobalStyle`
         /* background-color:  #013987; */
         box-sizing: border-box;
     };
+ 
+    a:link {text-decoration: none; color:black;}
+    a:visited {text-decoration: none; color: black;}
+    a:hover {text-decoration: none; color: #0F60D1;}
+
+
     *{
         box-sizing: border-box;
     }

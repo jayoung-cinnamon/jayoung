@@ -64,7 +64,7 @@ const Container = styled.div`
 `;
 
 const Screen = styled.div`
-  width: 90%;
+  width: 80%;
   height: 120%;
   background-color: #0f60d1;
   border-radius: 10px;
@@ -74,7 +74,7 @@ const Screen = styled.div`
   justify-content: space-evenly;
   @media (max-width: 768px) {
     width: 100%;
-    padding: 20px 10px 20px 10px;
+    padding: 20px 20px 20px 20px;
   }
 `;
 
@@ -107,9 +107,10 @@ const Logo = styled.div`
 
 const NameContainer = styled.div`
   display: flex;
+  /* height: 150%; */
   flex-direction: column;
   align-items: flex-start;
-  /* justify-content: space-evenly; */
+  justify-content: space-between;
 `;
 
 const NameTag = styled.div`
@@ -128,7 +129,8 @@ const EmailTag = styled(NameTag)`
   font-size: 20px;
   font-weight: 100;
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 15px;
+    margin-top: 7px;
   }
 `;
 
@@ -169,6 +171,7 @@ const IconContainer = styled.div`
   @media (max-width: 768px) {
     justify-content: space-around;
     padding-right: 10px;
+    bottom: -10px;
   }
 `;
 

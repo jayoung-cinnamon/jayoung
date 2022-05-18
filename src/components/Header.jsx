@@ -4,7 +4,9 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <Container>
-      <Logo>jayoung.</Logo>
+      <a target="_blank" href="https://github.com/jayoung-cinnamon">
+        <Logo>jayoung.</Logo>
+      </a>
       <Menu>
         <Item>about</Item>
         <Item>work</Item>
