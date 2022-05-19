@@ -61,7 +61,7 @@ const Container = styled.div`
   padding-bottom: 20px;
   /* padding-right: 80px;
   padding-left: 80px; */
-  border: 1px solid green;
+  /* border: 1px solid green; */
   position: relative;
   @media (max-width: 768px) {
     /* min-height: 100vh; */
@@ -88,7 +88,8 @@ const Profile = styled.div`
   width: 100%;
   /* height: 100px; */
   display: flex;
-  /* border: 1px solid wheat; */
+  padding-bottom: 15px;
+  border-bottom: 1px solid wheat;
 `;
 
 const Logo = styled.div`

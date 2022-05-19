@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import MainText from "./MainText";
 import Project from "./Project";
+import SkillIcon from "./SkillIcon";
 import { Parallax, useParallax } from "react-scroll-parallax";
 const Work = () => {
   return (
@@ -9,18 +10,67 @@ const Work = () => {
       <MainText text="Work" />
       <ScreenContainer>
         {/* <Screen> */}
+
         <Parallax speed={10}>
-          <Project text="Happy Bottle ☘️" />
+          <Project
+            text="Happy Bottle"
+            content={`It is an app
+            that keeps happy moments in a bottle.
+            Notes can be read after 30 days.`}
+            imgUrl={"/images/happyBottle2.png"}
+          />
+          <SkillContainer>
+            <SkillIcon skill="React" />
+            <SkillIcon skill="TypeScript" />
+            <SkillIcon skill="Recoil" />
+            <SkillIcon skill="Firebase" />
+          </SkillContainer>
         </Parallax>
         <Parallax speed={20}>
-          <Project text="Card maker 💳" />
+          <Project
+            text="Architect Portfolio"
+            content={`A web portfolio site for architects.
+             You can actually see the 3dModeling implemented on this site.`}
+            imgUrl={"/images/archi2.png"}
+          />
+          <SkillContainer>
+            <SkillIcon skill="TypeScript" />
+            <SkillIcon skill="React" />
+            <SkillIcon skill="WebGL" />
+            <SkillIcon skill="Java" />
+          </SkillContainer>
         </Parallax>
         <Parallax speed={30}>
-          <Project text="Agenda 💊" />
+          <Project
+            text="Agenda"
+            content={`This is a project I did at the school I graduated from.
+            A website where you can manage your prescriptions.`}
+            imgUrl={"/images/agenda.png"}
+          />
+          <SkillContainer>
+            <SkillIcon skill="javaScript" />
+            <SkillIcon skill="Java" />
+            <SkillIcon skill="HTML" />
+            <SkillIcon skill="CSS" />
+          </SkillContainer>
         </Parallax>
         <Parallax speed={40}>
-          <Project text="Onsoo 📚" />
+          <Project
+            text="Onsoo"
+            content={`This is a project I did at the school I graduated from.
+            This is a video-based tutoring site.`}
+            imgUrl={"/images/onsoo.png"}
+          />
+          <SkillContainer>
+            <SkillIcon skill="javaScript" />
+            <SkillIcon skill="Java" />
+            <SkillIcon skill="HTML" />
+            <SkillIcon skill="CSS" />
+          </SkillContainer>
         </Parallax>
+        {/* <Parallax speed={20}>
+          <Project text="Card maker 💳" imgUrl={"/images/happyBottle2.png"} />
+        </Parallax> */}
 
         {/* <Parallax speed={10}>
           <Project />
@@ -71,13 +121,13 @@ const Container = styled.div`
   padding-left: 80px; */
   padding-top: 200px;
   position: relative;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 `;
 
 const ScreenContainer = styled.div`
   width: 100%;
   /* height: 80%; */
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,5 +146,21 @@ const Screen = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     padding: 20px 20px 20px 20px;
+  }
+`;
+
+const SkillContainer = styled.div`
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 100px;
+  left: 40px;
+  /* border: 1px solid red; */
+  @media (max-width: 768px) {
+    bottom: 270px;
+    left: 30px;
+    width: 30%;
   }
 `;

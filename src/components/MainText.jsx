@@ -10,7 +10,7 @@ const TitleText = styled.div`
   font-size: 200px;
   line-height: 100%;
   letter-spacing: 90px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   font-weight: 400;
   text-align: left;
@@ -22,12 +22,10 @@ const TitleText = styled.div`
   text-shadow: -1px -1px 0 #cdcdcd, 1px -1px 0 #cdcdcd, -1px 1px 0 #cdcdcd,
     1px 1px 0 #cdcdcd;
   @media (max-width: 768px) {
-     {
-      font-size: 60px;
-      /* text-align: right; */
-      width: 100%;
-      letter-spacing: 45px;
-      /* height: 20%; */
-    }
+    font-size: 70px;
+    /* text-align: right; */
+    width: 100%;
+    letter-spacing: 45px;
+    /* height: 20%; */
   }
 `;
