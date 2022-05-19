@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import MainText from "./MainText";
-import Email from "./Email";
+
 const Contact = () => {
   return (
     <Container>
-      {/* <TextContainer>
-      </TextContainer> */}
-      <MainText text="Contact Me:)"></MainText>
-      <Email />
+      <MainText text={`Contact Me:)`}></MainText>
+      <SubText>{`Let's\nmake\nsomething\ncool`}</SubText>
     </Container>
   );
 };
@@ -17,28 +15,44 @@ export default Contact;
 const Container = styled.div`
   margin: 0 auto;
   width: 100%;
-  /* max-width: 768px; */
   min-width: 320px;
-  min-height: 60vh;
+  min-height: 40vh;
   height: 100%;
   background-color: white;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 20px;
   /* flex-direction: column; */
   /* padding-right: 80px;
   padding-left: 80px; */
-  border: 1px solid red;
+  /* border: 1px solid green; */
   @media (max-width: 768px) {
-    min-height: 50vh;
+    width: 100%;
+    min-height: 30vh;
     flex-direction: column;
   }
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 `;
 
-const TextContainer = styled.div`
-  width: 50%;
+const SubText = styled.div`
+  /* border: 1px solid blue; */
   height: 100%;
-  border: 2px solid blue;
+  width: 100%;
+  font-size: 60px;
+  font-weight: 600;
+  z-index: 3;
+  letter-spacing: 10px;
+  text-align: right;
+  color: #0f60d1;
+  position: relative;
+  line-height: 120%;
+  white-space: pre-line;
+  @media (max-width: 768px) {
+    font-size: 30px;
+    /* border: 1px solid red; */
+  }
 `;

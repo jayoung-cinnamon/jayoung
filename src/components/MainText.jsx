@@ -9,8 +9,9 @@ export default MainText;
 const TitleText = styled.div`
   font-size: 200px;
   line-height: 100%;
-  letter-spacing: 90px;
+  letter-spacing: 10px;
   /* border: 1px solid red; */
+  white-space: pre-line;
   width: 100%;
   font-weight: 400;
   text-align: left;
@@ -25,7 +26,7 @@ const TitleText = styled.div`
     font-size: 70px;
     /* text-align: right; */
     width: 100%;
-    letter-spacing: 45px;
+    letter-spacing: 20px;
     /* height: 20%; */
   }
 `;

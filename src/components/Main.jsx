@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import LandingPage from "./LandingPage";
@@ -8,17 +8,22 @@ import Work from "./Work";
 import Contact from "./Contact";
 import Wave from "./Wave";
 import About2 from "./About2";
+import Footer from "./Footer";
 const Main = () => {
+  const contactRef = useRef < HTMLDivElement > null;
+  const onContactClick = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <MainContainer>
         <Header />
         <LandingPage />
-
         <About />
         <About2 />
         <Work />
         <Contact />
+        <Footer />
       </MainContainer>
     </>
   );

@@ -33,7 +33,6 @@ const Work = () => {
             content={`A web portfolio site for architects.
              You can actually see the 3dModeling implemented on this site.`}
             imgUrl={"/images/archi2.png"}
-            github="https://github.com/jayoung-cinnamon/archi-portfolio"
           />
           <SkillContainer>
             <SkillIcon skill="TypeScript" />
@@ -45,7 +44,7 @@ const Work = () => {
         <Parallax speed={30}>
           <Project
             text="Agenda"
-            content={`This is a project I did at the school I graduated from.
+            content={`This is a project I did at the academy I graduated from.
             A website where you can manage your prescriptions.`}
             imgUrl={"/images/agenda.png"}
             github="https://github.com/jayoung-cinnamon/Agenda"
@@ -60,7 +59,7 @@ const Work = () => {
         <Parallax speed={40}>
           <Project
             text="Onsoo"
-            content={`This is a project I did at the school I graduated from.
+            content={`This is a project I did at the academy I graduated from.
             This is a video-based tutoring site.`}
             imgUrl={"/images/onsoo.png"}
             github="https://github.com/jayoung-cinnamon/onsoo"
