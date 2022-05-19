@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { useParallax } from "react-scroll-parallax";
+import MainText from "./MainText";
 const About2 = () => {
   const { ref } = useParallax({ speed: 20 });
   const [clickHeart, setClickHeart] = useState(false);
@@ -10,6 +11,7 @@ const About2 = () => {
 
   return (
     <Container>
+      <MainText text="About Me" />
       <Screen ref={ref}>
         <Profile>
           <Logo heart={clickHeart} />
@@ -59,9 +61,10 @@ const Container = styled.div`
   padding-bottom: 20px;
   /* padding-right: 80px;
   padding-left: 80px; */
-  /* border: 1px solid green; */
+  border: 1px solid green;
   position: relative;
   @media (max-width: 768px) {
+    /* min-height: 100vh; */
   }
 `;
 
@@ -69,13 +72,14 @@ const Screen = styled.div`
   width: 80%;
   height: 120%;
   background-color: #0f60d1;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   @media (max-width: 768px) {
     width: 100%;
+    /* height: 80vh; */
     padding: 20px 20px 20px 20px;
   }
 `;
@@ -203,7 +207,7 @@ const EmptyHeart = styled.div`
     height: 25px;
   }
 
-  animation: bigger 1s infinite ease-in-out;
+  animation: bigger 0.8s infinite ease-in-out;
 
   @keyframes bigger {
     from {
@@ -221,3 +225,27 @@ const EmptyHeart = styled.div`
       animation: none;
     `}
 `;
+
+// const TitleText = styled.div`
+//   font-size: 150px;
+//   line-height: 147%;
+//   letter-spacing: 86px;
+//   /* border: 1px solid red; */
+//   font-weight: 300;
+//   text-align: left;
+//   position: absolute;
+//   /* color: #0f60d1; */
+//   color: white;
+//   top: 0;
+//   left: 0;
+//   text-shadow: -1px -1px 0 #cdcdcd, 1px -1px 0 #cdcdcd, -1px 1px 0 #cdcdcd,
+//     1px 1px 0 #cdcdcd;
+//   @media (max-width: 768px) {
+//      {
+//       font-size: 60px;
+//       text-align: right;
+//       width: 100%;
+//       /* height: 20%; */
+//     }
+//   }
+// `;

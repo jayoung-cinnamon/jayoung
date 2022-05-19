@@ -10,7 +10,9 @@ const Header = () => {
       <Menu>
         <Item>about</Item>
         <Item>work</Item>
-        <Item>blog</Item>
+        <a target="_blank" href="https://diary-of-lemon.tistory.com/">
+          <Item>blog</Item>
+        </a>
         <Item>contact</Item>
       </Menu>
     </Container>
@@ -37,7 +39,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 10;
   @media (max-width: 768px) {
      {
       width: 93%;

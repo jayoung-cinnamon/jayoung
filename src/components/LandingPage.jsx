@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { useParallax } from "react-scroll-parallax";
 const LandingPage = () => {
   const eyesRef = useRef(null);
-  const { ref } = useParallax({ speed: -2 });
+  const { ref } = useParallax({ speed: -20 });
   useEffect(() => {
     if (!eyesRef.current) return;
     window.addEventListener("mousemove", handleMouseMove);
@@ -27,7 +27,7 @@ const LandingPage = () => {
     <>
       <Container>
         <EyeContainer ref={eyesRef}>
-          <Eye ref={ref}>
+          <Eye>
             <BlackEye className="ball" />
           </Eye>
           <Eye>
@@ -37,7 +37,7 @@ const LandingPage = () => {
 
         <MainText>
           <Text> CREATIVE</Text>
-          {"FRONTEND DEVELOPER."}
+          <p ref={ref}>{"FRONTEND DEVELOPER."}</p>
           <Text>BASED IN SEOUL.</Text>
         </MainText>
         <ArrowContainer>
@@ -112,13 +112,12 @@ const MainText = styled.div`
   letter-spacing: 10px;
   width: 90%;
   margin-bottom: 120px;
-  /* position: relative; */
+
   @media (max-width: 768px) {
-     {
-      font-size: 30px;
-      text-align: left;
-      width: 60%;
-    }
+    font-size: 30px;
+    text-align: left;
+    width: 60%;
+    margin-bottom: 25px;
   }
   ::before {
     content: "";
