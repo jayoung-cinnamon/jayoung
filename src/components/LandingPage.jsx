@@ -62,6 +62,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
   ::before {
     content: "";
     position: absolute;
@@ -172,9 +173,6 @@ const Arrow = styled.div`
   position: absolute;
   bottom: 30px;
   z-index: 1;
-  /* @media (max-width: 768px) {
-    display: none;
-  } */
 `;
 
 const Text = styled.div`
@@ -200,7 +198,6 @@ const Dot = styled.div`
   height: 23px;
   border-radius: 100%;
   border: 2px dotted #0f60d1;
-  /* background-color: #0f60d1; */
   animation: infiniteCircle 4s normal infinite ease-in-out;
   top: 23%;
   left: 30%;
@@ -214,41 +211,12 @@ const Dot = styled.div`
   }
 `;
 
-const Dot2 = styled.div`
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-color: #0f60d1;
-  top: 30%;
-  left: 30%;
-`;
-
-const Dot3 = styled.div`
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-color: #0f60d1;
-  top: 40%;
-  right: 10%;
-`;
-const Dot4 = styled.div`
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-color: #0f60d1;
-  top: 80%;
-  right: 20%;
-`;
 const EyeContainer = styled.div`
   position: absolute;
   top: 60%;
   right: 10%;
   width: 100px;
   height: 100px;
-  /* border: 1px solid green; */
   display: flex;
 `;
 
@@ -270,11 +238,4 @@ const BlackEye = styled.div`
   height: 40px;
   background: #000;
   border-radius: 50%;
-
-  /* ${(props) =>
-    props.position &&
-    css`
-      transform: translateX({mousePosition.mouseLeft}),
-        translateY({mousePosition.mouseRight});
-    `} */
 `;

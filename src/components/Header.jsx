@@ -24,11 +24,7 @@ export default Header;
 const Container = styled.div`
   margin: 0 auto;
   width: 90%;
-
-  /* max-width: 768px; */
   min-width: 320px;
-  /* padding-right: 80px;
-  padding-left: 80px; */
   border-bottom: 1px solid #ededed;
   height: 50px;
   display: flex;
@@ -52,7 +48,6 @@ const Logo = styled.div`
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  /* border: 1px solid red; */
   bottom: 13px;
   position: absolute;
   animation: jump 1.5s infinite ease-in;

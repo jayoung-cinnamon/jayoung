@@ -11,12 +11,3 @@ const Container = styled.div`
   width: 100%;
   background-color: white;
 `;
-
-// const Images = styled.div`
-//   background-image: url("/images/profile.JPG");
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   background-repeat: no-repeat;
-
-//   height: 30vh;
-// `;

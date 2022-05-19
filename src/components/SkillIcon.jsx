@@ -1,18 +1,16 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const SkillIcon = ({ skill, color }) => {
+const SkillIcon = ({ skill }) => {
   return <ButtonContainer skill={skill}>{skill}</ButtonContainer>;
 };
 
 export default SkillIcon;
 
 const ButtonContainer = styled.div`
-  /* width: 100px; */
   height: 24px;
   font-size: 13px;
   line-height: 1.3;
-  /* border: 1px solid black; */
   z-index: 5;
   border-radius: 3px;
   margin-right: 5px;

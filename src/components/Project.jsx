@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { BsGithub } from "react-icons/bs";
 const Project = ({ text, imgUrl, content, github }) => {
   return (
@@ -26,10 +26,8 @@ const ProjectContainer = styled.div`
   max-width: 60vw;
   margin-bottom: 50px;
   height: 350px;
-  /* background-color: #ededed; */
   border-radius: 20px;
   z-index: 1;
-  /* text-align: center; */
   display: flex;
   justify-content: space-between;
   @media (max-width: 768px) {
@@ -42,19 +40,12 @@ const ProjectContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  /* background-color: #ededed; */
   width: 50%;
-
-  /* height: 300px; */
   display: flex;
   padding: 30px;
-  /* border: 1px solid #0f60d1; */
   flex-direction: column;
-  /* justify-content: center; */
   align-items: flex-start;
-  /* border-radius: 20px 0 0 20px; */
   @media (max-width: 768px) {
-    /* width: 50vw; */
     width: 100%;
     height: 100%;
     flex-direction: row;
@@ -64,7 +55,6 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.div`
-  /* width: 100px; */
   font-size: 30px;
   font-weight: 700;
   white-space: pre-line;
@@ -77,7 +67,6 @@ const Title = styled.div`
       margin-top: 10px;
     }
   }
-  /* border: 1px solid black; */
   @media (max-width: 768px) {
     font-size: 20px;
     width: 50%;
@@ -94,18 +83,13 @@ const ImageContainer = styled.div`
   white-space: pre-line;
   color: black;
   line-height: 100%;
-  /* border: 2px solid red; */
   border-radius: 0px 20px 20px 0px;
   display: flex;
   align-items: center;
   img {
     width: 100%;
-    /* height: 100%; */
     background-size: cover;
-    /* border: 2px solid black; */
-    /* border-radius: 0px 20px 20px 0px; */
     border-radius: 20px;
-    /* background-position: center center; */
     @media (max-width: 768px) {
       width: 89vw;
       border-radius: 0;
@@ -127,7 +111,6 @@ const Content = styled.div`
   line-height: 1.5;
   font-size: 15px;
   @media (max-width: 768px) {
-    /* border: 1px solid blue; */
     margin: 0;
     font-size: 13px;
     text-align: right;

@@ -26,20 +26,14 @@ const Container = styled.div`
   flex-wrap: wrap;
   overflow: hidden;
   margin-bottom: 20px;
-  /* flex-direction: column; */
-  /* padding-right: 80px;
-  padding-left: 80px; */
-  /* border: 1px solid green; */
   @media (max-width: 768px) {
     width: 100%;
     min-height: 30vh;
     flex-direction: column;
   }
-  /* margin-bottom: 50px; */
 `;
 
 const SubText = styled.div`
-  /* border: 1px solid blue; */
   height: 100%;
   width: 100%;
   font-size: 60px;
@@ -53,6 +47,5 @@ const SubText = styled.div`
   white-space: pre-line;
   @media (max-width: 768px) {
     font-size: 30px;
-    /* border: 1px solid red; */
   }
 `;
