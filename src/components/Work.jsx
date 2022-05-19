@@ -18,6 +18,7 @@ const Work = () => {
             that keeps happy moments in a bottle.
             Notes can be read after 30 days.`}
             imgUrl={"/images/happyBottle2.png"}
+            github="https://github.com/jayoung-cinnamon/happybottle"
           />
           <SkillContainer>
             <SkillIcon skill="React" />
@@ -32,6 +33,7 @@ const Work = () => {
             content={`A web portfolio site for architects.
              You can actually see the 3dModeling implemented on this site.`}
             imgUrl={"/images/archi2.png"}
+            github="https://github.com/jayoung-cinnamon/archi-portfolio"
           />
           <SkillContainer>
             <SkillIcon skill="TypeScript" />
@@ -46,6 +48,7 @@ const Work = () => {
             content={`This is a project I did at the school I graduated from.
             A website where you can manage your prescriptions.`}
             imgUrl={"/images/agenda.png"}
+            github="https://github.com/jayoung-cinnamon/Agenda"
           />
           <SkillContainer>
             <SkillIcon skill="javaScript" />
@@ -60,6 +63,7 @@ const Work = () => {
             content={`This is a project I did at the school I graduated from.
             This is a video-based tutoring site.`}
             imgUrl={"/images/onsoo.png"}
+            github="https://github.com/jayoung-cinnamon/onsoo"
           />
           <SkillContainer>
             <SkillIcon skill="javaScript" />
@@ -155,12 +159,12 @@ const SkillContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   position: absolute;
-  bottom: 100px;
-  left: 40px;
+  top: 200px;
+  left: 30px;
   /* border: 1px solid red; */
   @media (max-width: 768px) {
-    bottom: 270px;
-    left: 30px;
+    top: 120px;
+    left: 25px;
     width: 30%;
   }
 `;

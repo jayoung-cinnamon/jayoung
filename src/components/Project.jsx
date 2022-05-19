@@ -1,10 +1,16 @@
 import React from "react";
 import styled, { css } from "styled-components";
-const Project = ({ text, imgUrl, content }) => {
+import { BsGithub } from "react-icons/bs";
+const Project = ({ text, imgUrl, content, github }) => {
   return (
     <ProjectContainer>
       <TextContainer>
-        <Title>{text}</Title>
+        <Title>
+          {text}
+          <a target="_blank" href={github}>
+            <BsGithub className="github" />
+          </a>
+        </Title>
         <Content>{content}</Content>
       </TextContainer>
       <ImageContainer>
@@ -18,13 +24,14 @@ export default Project;
 
 const ProjectContainer = styled.div`
   max-width: 60vw;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   height: 350px;
-  background-color: #ededed;
+  /* background-color: #ededed; */
   border-radius: 20px;
   z-index: 1;
   /* text-align: center; */
   display: flex;
+  justify-content: space-between;
   @media (max-width: 768px) {
     max-width: 89vw;
     height: 450px;
@@ -41,11 +48,11 @@ const TextContainer = styled.div`
   /* height: 300px; */
   display: flex;
   padding: 30px;
-  /* border: 1px solid red; */
+  /* border: 1px solid #0f60d1; */
   flex-direction: column;
   /* justify-content: center; */
   align-items: flex-start;
-  border-radius: 20px 0 0 20px;
+  /* border-radius: 20px 0 0 20px; */
   @media (max-width: 768px) {
     /* width: 50vw; */
     width: 100%;
@@ -64,7 +71,12 @@ const Title = styled.div`
   color: #0f60d1;
   line-height: 100%;
   letter-spacing: 5px;
-
+  .github {
+    width: 20px;
+    @media (max-width: 768px) {
+      margin-top: 10px;
+    }
+  }
   /* border: 1px solid black; */
   @media (max-width: 768px) {
     font-size: 20px;
@@ -84,13 +96,15 @@ const ImageContainer = styled.div`
   line-height: 100%;
   /* border: 2px solid red; */
   border-radius: 0px 20px 20px 0px;
-
+  display: flex;
+  align-items: center;
   img {
     width: 100%;
-    height: 100%;
-    background-size: contain;
+    /* height: 100%; */
+    background-size: cover;
     /* border: 2px solid black; */
-    border-radius: 0px 20px 20px 0px;
+    /* border-radius: 0px 20px 20px 0px; */
+    border-radius: 20px;
     /* background-position: center center; */
     @media (max-width: 768px) {
       width: 89vw;

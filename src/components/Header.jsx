@@ -29,7 +29,7 @@ const Container = styled.div`
   min-width: 320px;
   /* padding-right: 80px;
   padding-left: 80px; */
-  /* border: 1px solid red; */
+  border-bottom: 1px solid #ededed;
   height: 50px;
   display: flex;
   align-items: center;
@@ -52,14 +52,27 @@ const Logo = styled.div`
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  /* border: 1px solid red; */
+  bottom: 13px;
+  position: absolute;
+  animation: jump 1.5s infinite ease-in;
+  @keyframes jump {
+    0% {
+      bottom: 13px;
+    }
+    50% {
+      bottom: 15px;
+    }
+    100% {
+      bottom: 13px;
+    }
+  }
 `;
 
 const Menu = styled.div`
   display: flex;
   @media (max-width: 768px) {
-     {
-      display: none;
-    }
+    display: none;
   }
 `;
 
