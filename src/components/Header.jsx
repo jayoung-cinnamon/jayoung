@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
-const Header = () => {
+const Header = (e) => {
+  const focusTarget = useRef([]);
+  //구조분해 할당
+  const scrollTo = (e) => {
+    const name = e.target.name;
+    const category = {
+      about: 0,
+      work: 1,
+      contact: 2,
+    };
+    //category의 name의 키값과 같은 컴포넌트로 이동
+    focusTarget.current[category[name]].scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <Container>
+    <Container scrollTo={scrollTo}>
       <a target="_blank" href="https://github.com/jayoung-cinnamon">
         <Logo>jayoung.</Logo>
       </a>
       <Menu>
-        <Item>about</Item>
-        <Item>work</Item>
+        <Item ref={(el) => (focusTarget.current[0] = el)}>about</Item>
+        <Item ref={(el) => (focusTarget.current[1] = el)}> work</Item>
+        <Item ref={(el) => (focusTarget.current[2] = el)}>contact</Item>
         <a target="_blank" href="https://diary-of-lemon.tistory.com/">
           <Item>blog</Item>
         </a>
-        <Item>contact</Item>
       </Menu>
     </Container>
   );
@@ -49,7 +61,7 @@ const Logo = styled.div`
   font-weight: 500;
   cursor: pointer;
   bottom: 13px;
-  position: absolute;
+  /* position: absolute; */
   animation: jump 1.5s infinite ease-in;
   @keyframes jump {
     0% {

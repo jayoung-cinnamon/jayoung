@@ -55,7 +55,7 @@ const Container = styled.div`
   margin-top: 50px;
   width: 100%;
   min-width: 320px;
-  height: 100%;
+  height: 100vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -112,13 +112,13 @@ const MainText = styled.div`
   line-height: 147%;
   letter-spacing: 10px;
   width: 90%;
-  margin-bottom: 120px;
+  /* margin-bottom: 120px; */
 
   @media (max-width: 768px) {
     font-size: 30px;
     text-align: left;
     width: 60%;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
   }
   ::before {
     content: "";
@@ -188,25 +188,6 @@ const Text = styled.div`
       font-size: 30px;
       text-align: left;
       width: 60%;
-    }
-  }
-`;
-
-const Dot = styled.div`
-  position: absolute;
-  width: 23px;
-  height: 23px;
-  border-radius: 100%;
-  border: 2px dotted #0f60d1;
-  animation: infiniteCircle 4s normal infinite ease-in-out;
-  top: 23%;
-  left: 30%;
-  @keyframes infiniteCircle {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
     }
   }
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import LandingPage from "./LandingPage";
@@ -7,16 +7,16 @@ import Work from "./Work";
 import Contact from "./Contact";
 import About2 from "./About2";
 import Footer from "./Footer";
-const Main = () => {
+const Main = ({ scrollTo }) => {
   return (
     <>
       <MainContainer>
         <Header />
         <LandingPage />
-        <About />
+        <About name="about" onClick={scrollTo} />
         <About2 />
-        <Work />
-        <Contact />
+        <Work name="work" onClick={scrollTo} />
+        <Contact name="contact" onClick={scrollTo} />
         <Footer />
       </MainContainer>
     </>
