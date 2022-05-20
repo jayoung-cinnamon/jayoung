@@ -31,6 +31,7 @@ const Work = () => {
             content={`A web portfolio site for architects.
              You can actually see the 3dModeling implemented on this site.`}
             imgUrl={"/images/archi2.png"}
+            github="https://github.com/jayoung-cinnamon/archi-portfolio"
           />
           <SkillContainer>
             <SkillIcon skill="TypeScript" />
