@@ -15,7 +15,7 @@ const Work = () => {
             content={`It is an app
             that keeps happy moments in a bottle.
             Notes can be read after 30 days.`}
-            imgUrl={"./public/images/happyBottle2.png"}
+            imgUrl={"images/happyBottle2.png"}
             github="https://github.com/jayoung-cinnamon/happybottle"
           />
           <SkillContainer>
@@ -30,7 +30,7 @@ const Work = () => {
             text="Architect Portfolio"
             content={`A web portfolio site for architects.
              You can actually see the 3dModeling implemented on this site.`}
-            imgUrl={"./public/images/archi2.png"}
+            imgUrl={"images/archi2.png"}
             github="https://github.com/jayoung-cinnamon/archi-portfolio"
           />
           <SkillContainer>
@@ -45,7 +45,7 @@ const Work = () => {
             text="Agenda"
             content={`This is a project I did at the academy I graduated from.
             A website where you can manage your prescriptions.`}
-            imgUrl={"./public/images/agenda.png"}
+            imgUrl={"images/agenda.png"}
             github="https://github.com/jayoung-cinnamon/Agenda"
           />
           <SkillContainer>
@@ -60,7 +60,7 @@ const Work = () => {
             text="Onsoo"
             content={`This is a project I did at the academy I graduated from.
             This is a video-based tutoring site.`}
-            imgUrl={"./public/images/onsoo.png"}
+            imgUrl={"images/onsoo.png"}
             github="https://github.com/jayoung-cinnamon/onsoo"
           />
           <SkillContainer>
