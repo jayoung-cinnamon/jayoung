@@ -66,7 +66,7 @@ const ProfileImage = styled.div`
   width: 100%;
   height: 100vh;
   text-align: center;
-  background-image: url("./jayoung/public/images/bwWaveProfile.jpeg");
+  background-image: url("./public/images/bwWaveProfile.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
