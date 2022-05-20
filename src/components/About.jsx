@@ -39,6 +39,7 @@ const Container = styled.div`
   padding-bottom: 20px;
   position: relative;
   @media (max-width: 768px) {
+    /* border: 1px solid green; */
   }
 `;
 

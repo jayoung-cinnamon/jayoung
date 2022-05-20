@@ -40,9 +40,9 @@ const LandingPage = () => {
           <p ref={ref}>{"FRONTEND DEVELOPER."}</p>
           <Text>BASED IN SEOUL.</Text>
         </MainText>
-        <ArrowContainer>
+        {/* <ArrowContainer>
           <Arrow />
-        </ArrowContainer>
+        </ArrowContainer> */}
       </Container>
     </>
   );
@@ -56,7 +56,7 @@ const Container = styled.div`
   width: 100%;
   min-width: 320px;
   height: 100vh;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,10 +96,12 @@ const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    ::after {
+    /* ::after {
       animation: spin 6s normal forwards cubic-bezier(0.06, 0.66, 0.29, 0.17);
-    }
+    } */
     align-items: start;
+    margin-top: 40px;
+    /* border: 1px solid blue; */
   }
 `;
 
@@ -112,13 +114,13 @@ const MainText = styled.div`
   line-height: 147%;
   letter-spacing: 10px;
   width: 90%;
-  /* margin-bottom: 120px; */
+  margin-bottom: 120px;
 
   @media (max-width: 768px) {
     font-size: 30px;
     text-align: left;
     width: 60%;
-    /* margin-bottom: 25px; */
+    margin-bottom: 25px;
   }
   ::before {
     content: "";
@@ -141,6 +143,12 @@ const MainText = styled.div`
     background-color: #f4d405;
     animation: spin2 4s normal forwards cubic-bezier(0.06, 0.66, 0.29, 0.17);
     z-index: 4;
+
+  @media (max-width: 768px) {
+    ::after 
+      animation: spin 9s normal forwards cubic-bezier(0.06, 0.66, 0.29, 0.17);
+    
+  }
   }
 
   @keyframes spin2 {
@@ -152,11 +160,6 @@ const MainText = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
-    ::after {
-      animation: spin 9s normal forwards cubic-bezier(0.06, 0.66, 0.29, 0.17);
-    }
-  }
 `;
 
 const ArrowContainer = styled.div`

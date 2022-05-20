@@ -29,10 +29,12 @@ const MainContainer = styled.div`
   width: 90%;
   min-width: 320px;
   min-height: 100vh;
+  height: 100%;
   background-color: white;
   display: flex;
   overflow-x: hidden;
   flex-direction: column;
+  overflow: hidden;
   @media (max-width: 768px) {
     width: 93%;
   }
