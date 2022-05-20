@@ -42,7 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://jayoung.github.io",
+  "homepage": "http://jayoung.github.io/jayoung",
   "devDependencies": {
     "gh-pages": "^4.0.0"
   }
