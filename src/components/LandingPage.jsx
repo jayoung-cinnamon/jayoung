@@ -167,7 +167,7 @@ const ArrowContainer = styled.div`
 const Arrow = styled.div`
   width: 20px;
   height: 56px;
-  background-image: url("https://jayoung-cinnamon.github.io/jayoung/curlyArrow.png");
+  background-image: url("https://jayoung-cinnamon.github.io/jayoung/public/images/curlyArrow.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
