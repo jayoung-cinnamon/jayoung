@@ -16,7 +16,7 @@ const Work = () => {
             that keeps happy moments in a bottle.
             Notes can be read after 30 days.`}
             imgUrl={
-              "https://jayoung-cinnamon.github.io/jayoung/public/images/happyBottle2.png"
+              "https://jayoung-cinnamon/jayoung/public/images/happyBottle2.png"
             }
             github="https://github.com/jayoung-cinnamon/happybottle"
           />
@@ -32,9 +32,7 @@ const Work = () => {
             text="Architect Portfolio"
             content={`A web portfolio site for architects.
              You can actually see the 3dModeling implemented on this site.`}
-            imgUrl={
-              "https://jayoung-cinnamon.github.io/jayoung/public/images/archi2.png"
-            }
+            imgUrl={"https://jayoung-cinnamon/jayoung/public/images/archi2.png"}
             github="https://github.com/jayoung-cinnamon/archi-portfolio"
           />
           <SkillContainer>
@@ -49,9 +47,7 @@ const Work = () => {
             text="Agenda"
             content={`This is a project I did at the academy I graduated from.
             A website where you can manage your prescriptions.`}
-            imgUrl={
-              "https://jayoung-cinnamon.github.io/jayoung/public/images/agenda.png"
-            }
+            imgUrl={"https://jayoung-cinnamon/jayoung/public/images/agenda.png"}
             github="https://github.com/jayoung-cinnamon/Agenda"
           />
           <SkillContainer>
@@ -66,9 +62,7 @@ const Work = () => {
             text="Onsoo"
             content={`This is a project I did at the academy I graduated from.
             This is a video-based tutoring site.`}
-            imgUrl={
-              "https://jayoung-cinnamon.github.io/jayoung/public/images/onsoo.png"
-            }
+            imgUrl={"https://jayoung-cinnamon/jayoung/public/images/onsoo.png"}
             github="https://github.com/jayoung-cinnamon/onsoo"
           />
           <SkillContainer>

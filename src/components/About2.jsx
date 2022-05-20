@@ -87,7 +87,7 @@ const Profile = styled.div`
 const Logo = styled.div`
   width: 90px;
   height: 90px;
-  background-image: url("https://jayoung-cinnamon.github.io/jayoung/public/images/ProfileSmile.png");
+  background-image: url("https://jayoung-cinnamon/jayoung/public/images/ProfileSmile.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 20px;
@@ -99,7 +99,7 @@ const Logo = styled.div`
   ${(props) =>
     props.heart &&
     css`
-      background-image: url("https://jayoung-cinnamon.github.io/jayoung/public/images/smile.png");
+      background-image: url("https://jayoung-cinnamon/jayoung/public/images/smile.png");
       animation: none;
     `}
 `;
@@ -170,7 +170,7 @@ const IconContainer = styled.div`
 const Envelope = styled.div`
   width: 45px;
   height: 40px;
-  background-image: url("https://jayoung-cinnamon.github.io/jayoung/public/images/Envelope.png");
+  background-image: url("https://jayoung-cinnamon/jayoung/public/images/Envelope.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: 5px;
@@ -184,7 +184,7 @@ const Envelope = styled.div`
 const EmptyHeart = styled.div`
   width: 40px;
   height: 40px;
-  background-image: url("https://jayoung-cinnamon.github.io/jayoung/public/images/EmptyHeart.png");
+  background-image: url("https://jayoung-cinnamon/jayoung/public/images/EmptyHeart.png");
   background-repeat: no-repeat;
   background-size: contain;
   @media (max-width: 768px) {
@@ -206,7 +206,7 @@ const EmptyHeart = styled.div`
   ${(props) =>
     props.heart &&
     css`
-      background-image: url("https://jayoung-cinnamon.github.io/jayoung/public/images/Heart.png");
+      background-image: url("https://jayoung-cinnamon/jayoung/public/images/Heart.png");
       animation: none;
     `}
 `;
