@@ -100,21 +100,6 @@ const ScreenContainer = styled.div`
   align-items: center;
 `;
 
-const Screen = styled.div`
-  width: 80%;
-  height: 300px;
-  background-color: #0f60d1;
-  border-radius: 20px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 20px 20px 20px 20px;
-  }
-`;
-
 const SkillContainer = styled.div`
   display: flex;
   flex-direction: row;
