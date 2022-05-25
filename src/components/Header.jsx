@@ -5,14 +5,14 @@ import _ from "lodash";
 const Header = (props) => {
   return (
     <Container>
-      <a target="_blank">
+      <a target="_blank" href="https://github.com/jayoung-cinnamon">
         <Logo>jayoung.</Logo>
       </a>
       <Menu>
         <Item onClick={props.scrollToAbout}>about</Item>
         <Item onClick={props.scrollToWork}> work</Item>
         <Item onClick={props.scrollToContact}>contact</Item>
-        <a target="_blank">
+        <a target="_blank" href="https://diary-of-lemon.tistory.com/">
           <Item>blog</Item>
         </a>
       </Menu>
