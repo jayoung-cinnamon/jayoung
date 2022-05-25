@@ -1,29 +1,18 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
+import _ from "lodash";
 
-const Header = (e) => {
-  const focusTarget = useRef([]);
-  //구조분해 할당
-  const scrollTo = (e) => {
-    const name = e.target.name;
-    const category = {
-      about: 0,
-      work: 1,
-      contact: 2,
-    };
-    //category의 name의 키값과 같은 컴포넌트로 이동
-    focusTarget.current[category[name]].scrollIntoView({ behavior: "smooth" });
-  };
+const Header = (props) => {
   return (
-    <Container scrollTo={scrollTo}>
-      <a target="_blank" href="https://github.com/jayoung-cinnamon">
+    <Container>
+      <a target="_blank">
         <Logo>jayoung.</Logo>
       </a>
       <Menu>
-        <Item ref={(el) => (focusTarget.current[0] = el)}>about</Item>
-        <Item ref={(el) => (focusTarget.current[1] = el)}> work</Item>
-        <Item ref={(el) => (focusTarget.current[2] = el)}>contact</Item>
-        <a target="_blank" href="https://diary-of-lemon.tistory.com/">
+        <Item onClick={props.scrollToAbout}>about</Item>
+        <Item onClick={props.scrollToWork}> work</Item>
+        <Item onClick={props.scrollToContact}>contact</Item>
+        <a target="_blank">
           <Item>blog</Item>
         </a>
       </Menu>

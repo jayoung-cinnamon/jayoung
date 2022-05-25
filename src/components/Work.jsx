@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import MainText from "./MainText";
 import Project from "./Project";
 import SkillIcon from "./SkillIcon";
 import { Parallax } from "react-scroll-parallax";
-const Work = () => {
+const Work = forwardRef((props, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <MainText text="Work" />
       <ScreenContainer>
         <Parallax speed={10}>
@@ -73,7 +73,7 @@ const Work = () => {
       </ScreenContainer>
     </Container>
   );
-};
+});
 
 export default Work;
 

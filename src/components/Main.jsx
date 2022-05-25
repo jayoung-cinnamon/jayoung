@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { forwardRef, useRef, useImperativeHandle } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import LandingPage from "./LandingPage";
@@ -7,16 +7,48 @@ import Work from "./Work";
 import Contact from "./Contact";
 import About2 from "./About2";
 import Footer from "./Footer";
-const Main = ({ scrollTo }) => {
+import _ from "lodash";
+const Main = () => {
+  const aboutRef = useRef(null);
+  //ref :값이 변해도 rerender가 되지않는다!!
+  const workRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView();
+    //current 필수!
+    console.log("aboutRef.current", aboutRef.current);
+  };
+  const scrollToWork = () => {
+    workRef.current.scrollIntoView();
+    console.log("workRef.current", workRef.current);
+  };
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView();
+    console.log("contactRef.current", contactRef.current);
+  };
+
   return (
     <>
       <MainContainer>
-        <Header />
+        <Header
+          scrollToAbout={scrollToAbout}
+          scrollToWork={scrollToWork}
+          scrollToContact={scrollToContact}
+        />
         <LandingPage />
-        <About name="about" onClick={scrollTo} />
-        <About2 />
-        <Work name="work" onClick={scrollTo} />
-        <Contact name="contact" onClick={scrollTo} />
+        <section>
+          <About ref={aboutRef} />
+        </section>
+        <section>
+          <About2 />
+        </section>
+        <section>
+          <Work ref={workRef} />
+        </section>
+        <section>
+          <Contact ref={contactRef} />
+        </section>
         <Footer />
       </MainContainer>
     </>

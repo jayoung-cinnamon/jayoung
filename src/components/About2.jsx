@@ -17,7 +17,7 @@ const About2 = () => {
           <Logo heart={clickHeart} />
           <NameContainer>
             <NameTag>jayoung</NameTag>
-            <EmailTag>coffeejayoung@gamil.com</EmailTag>
+            <EmailTag>coffeejayoung@gmail.com</EmailTag>
           </NameContainer>
         </Profile>
         <Content>

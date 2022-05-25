@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { useParallax } from "react-scroll-parallax";
 
-const About = () => {
+const About = forwardRef((props, containerRef) => {
   const { ref } = useParallax({ speed: 10 });
   const [isMouseMove, setIsMouseMove] = useState(false);
   const handleMouseMove = (e) => {
     setIsMouseMove(!isMouseMove);
   };
 
-  useEffect(() => {
-    console.log("isMouseMove", isMouseMove);
-  }, []);
-
   return (
-    <Container onWheel={handleMouseMove}>
+    <Container ref={containerRef} onWheel={handleMouseMove}>
       <ProfileImage />
       <MainText ref={ref}>{`ja++\nyoung.`}</MainText>
       <BubbleContainer>
@@ -22,7 +18,7 @@ const About = () => {
       </BubbleContainer>
     </Container>
   );
-};
+});
 
 export default About;
 

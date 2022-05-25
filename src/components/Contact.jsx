@@ -1,15 +1,15 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import MainText from "./MainText";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <MainText text={`Contact Me:)`}></MainText>
       <SubText>{`Let's\nmake\nsomething\ncool`}</SubText>
     </Container>
   );
-};
+});
 export default Contact;
 
 const Container = styled.div`
