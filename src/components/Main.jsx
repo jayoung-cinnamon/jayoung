@@ -17,15 +17,12 @@ const Main = () => {
   const scrollToAbout = () => {
     aboutRef.current.scrollIntoView();
     //current 필수!
-    console.log("aboutRef.current", aboutRef.current);
   };
   const scrollToWork = () => {
     workRef.current.scrollIntoView();
-    console.log("workRef.current", workRef.current);
   };
   const scrollToContact = () => {
     contactRef.current.scrollIntoView();
-    console.log("contactRef.current", contactRef.current);
   };
 
   return (
