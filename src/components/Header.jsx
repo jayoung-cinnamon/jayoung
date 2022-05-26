@@ -9,10 +9,6 @@ const Header = (props) => {
     setMenuClick(!menuClick);
   };
 
-  useEffect(() => {
-    console.log(menuClick);
-  }, [menuClick]);
-
   return (
     <Container>
       <MenuWrapper>
