@@ -34,18 +34,10 @@ const Main = () => {
           scrollToContact={scrollToContact}
         />
         <LandingPage />
-        <section>
-          <About ref={aboutRef} />
-        </section>
-        <section>
-          <About2 />
-        </section>
-        <section>
-          <Work ref={workRef} />
-        </section>
-        <section>
-          <Contact ref={contactRef} />
-        </section>
+        <About ref={aboutRef} />
+        <About2 />
+        <Work ref={workRef} />
+        <Contact ref={contactRef} />
         <Footer />
       </MainContainer>
     </>
