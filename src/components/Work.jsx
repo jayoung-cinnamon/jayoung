@@ -37,7 +37,6 @@ const Work = forwardRef((props, ref) => {
             <SkillIcon skill="TypeScript" />
             <SkillIcon skill="React" />
             <SkillIcon skill="WebGL" />
-            <SkillIcon skill="Java" />
           </SkillContainer>
         </Parallax>
         <Parallax speed={30}>
