@@ -7,6 +7,15 @@ const Contact = forwardRef((props, ref) => {
     <Container ref={ref}>
       <MainText text={`Contact Me:)`}></MainText>
       <SubText>{`Let's\nmake\nsomething\ncool`}</SubText>
+      <SvgContainer>
+        <path
+          d="m0 100 C 500 100, 400 0, 600 00 S 00 300, 900 100"
+          stroke="#eb6e4c"
+          fill="none"
+          strokeWidth="6"
+          strokeLinecap="round"
+        />
+      </SvgContainer>
     </Container>
   );
 });
@@ -48,4 +57,13 @@ const SubText = styled.div`
   @media (max-width: 768px) {
     font-size: 30px;
   }
+`;
+
+const SvgContainer = styled.svg`
+  width: 100%;
+  border: 1px solid red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 80%;
 `;
