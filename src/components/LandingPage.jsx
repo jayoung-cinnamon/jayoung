@@ -187,11 +187,9 @@ const Text = styled.div`
     1px 1px 0 #0f60d1;
 
   @media (max-width: 768px) {
-     {
-      font-size: 30px;
-      text-align: left;
-      width: 60%;
-    }
+    font-size: 30px;
+    text-align: left;
+    width: 60%;
   }
 `;
 
