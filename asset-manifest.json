@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/jayoung/static/js/main.ccf4df6a.js",
+    "main.js": "/jayoung/static/js/main.8e4c3688.js",
     "index.html": "/jayoung/index.html",
-    "main.ccf4df6a.js.map": "/jayoung/static/js/main.ccf4df6a.js.map"
+    "main.8e4c3688.js.map": "/jayoung/static/js/main.8e4c3688.js.map"
   },
   "entrypoints": [
-    "static/js/main.ccf4df6a.js"
+    "static/js/main.8e4c3688.js"
   ]
 }
