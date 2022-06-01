@@ -14,7 +14,7 @@ const About = forwardRef((props, containerRef) => {
       <ProfileImage />
       <MainText ref={ref}>{`ja++\nyoung.`}</MainText>
       <BubbleContainer>
-        <Circle rotate={isMouseMove} />
+        <Circle rotate={isMouseMove ? 1 : 0} />
       </BubbleContainer>
     </Container>
   );
@@ -90,7 +90,6 @@ const TitleText = styled.div`
 
 const BubbleContainer = styled.div`
   position: absolute;
-  /* border: 2px solid blue; */
   top: 10%;
   @media (max-width: 768px) {
     top: 13%;
