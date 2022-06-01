@@ -65,7 +65,7 @@ const Text1 = styled.div`
   @media (max-width: 768px) {
     font-size: 30px;
     width: 50%;
-    top: 23%;
+    top: 20%;
     left: 10%;
   }
 `;
@@ -74,7 +74,7 @@ const Text2 = styled(Text1)`
   left: 30%;
   transform: rotate(-10deg);
   @media (max-width: 768px) {
-    top: 29%;
+    top: 22%;
     left: 40%;
     transform: rotate(-20deg);
   }
@@ -84,7 +84,7 @@ const Text3 = styled(Text1)`
   left: 60%;
   transform: rotate(30deg);
   @media (max-width: 768px) {
-    top: 38%;
+    top: 30%;
     left: 30%;
     transform: rotate(10deg);
   }
