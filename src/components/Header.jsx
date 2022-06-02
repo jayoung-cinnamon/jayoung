@@ -2,34 +2,38 @@ import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import _ from "lodash";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
+import Translation from "./Translation";
+import { useTranslation } from "react-i18next";
 
 const Header = (props) => {
   const [menuClick, setMenuClick] = useState(false);
   const onClickHamburger = () => {
     setMenuClick(!menuClick);
   };
-
+  const { t } = useTranslation();
   return (
     <Container>
       <MenuWrapper>
         <a target="_blank" href="https://github.com/jayoung-cinnamon">
-          <Logo>jayoung.</Logo>
+          <Logo>{t("name")}</Logo>
         </a>
+
         <Menu menuClick={menuClick}>
           <Item menuClick={menuClick} onClick={props.scrollToAbout}>
-            about
+            {t("about")}
           </Item>
           <Item menuClick={menuClick} onClick={props.scrollToWork}>
-            {" "}
-            work
+            {t("work")}
           </Item>
           <Item menuClick={menuClick} onClick={props.scrollToContact}>
-            contact
+            {t("contact")}
           </Item>
           <a target="_blank" href="https://diary-of-lemon.tistory.com/">
-            <Item menuClick={menuClick}>blog</Item>
+            <Item menuClick={menuClick}>{t("blog")}</Item>
           </a>
+          <Translation />
         </Menu>
+
         <Hamburger onClick={onClickHamburger}>
           {menuClick === true ? (
             <GiCancel color={"#0f60d1"} size={25} />
@@ -47,11 +51,11 @@ export default Header;
 const Container = styled.div``;
 
 const Logo = styled.div`
+  white-space: nowrap;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   bottom: 13px;
-  /* position: absolute; */
   animation: jump 1.5s infinite ease-in;
   @keyframes jump {
     0% {
@@ -102,7 +106,7 @@ const Item = styled.div`
   letter-spacing: 3px;
   font-weight: 400;
   cursor: pointer;
-
+  white-space: nowrap;
   @media (max-width: 768px) {
     ${(props) =>
       props.menuClick === true &&

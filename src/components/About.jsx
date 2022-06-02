@@ -1,18 +1,18 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { useParallax } from "react-scroll-parallax";
-
+import { useTranslation } from "react-i18next";
 const About = forwardRef((props, containerRef) => {
   const { ref } = useParallax({ speed: 10 });
   const [isMouseMove, setIsMouseMove] = useState(false);
   const handleMouseMove = (e) => {
     setIsMouseMove(!isMouseMove);
   };
-
+  const { t } = useTranslation();
   return (
     <Container ref={containerRef} onWheel={handleMouseMove}>
       <ProfileImage />
-      <MainText ref={ref}>{`ja++\nyoung.`}</MainText>
+      <MainText ref={ref}>{t("about jayoung")}</MainText>
       <BubbleContainer>
         <Circle rotate={isMouseMove ? 1 : 0} />
       </BubbleContainer>
@@ -35,7 +35,6 @@ const Container = styled.div`
   padding-bottom: 20px;
   position: relative;
   @media (max-width: 768px) {
-    /* border: 1px solid green; */
   }
 `;
 

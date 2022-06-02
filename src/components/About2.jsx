@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { useParallax } from "react-scroll-parallax";
 import MainText from "./MainText";
+import { useTranslation } from "react-i18next";
 const About2 = () => {
   const { ref } = useParallax({ speed: 20 });
   const [clickHeart, setClickHeart] = useState(false);
@@ -9,30 +10,20 @@ const About2 = () => {
     setClickHeart(!clickHeart);
   };
 
+  const { t } = useTranslation();
   return (
     <Container>
-      <MainText text="About Me" />
+      <MainText text={t("about me")} />
       <Screen ref={ref}>
         <Profile>
           <Logo heart={clickHeart} />
           <NameContainer>
-            <NameTag>jayoung</NameTag>
+            <NameTag>{t("name")}</NameTag>
             <EmailTag>coffeejayoung@gmail.com</EmailTag>
           </NameContainer>
         </Profile>
         <Content>
-          <ContentText>
-            {` hello, there! :)
-           I am a front-end developer.
-           I mainly use JavaScript and React.
-           I am also interested in all design and UI/UX design.
-           It's always fun to learn new things.
-           As slow but Steady is my motto,
-           I want to make tomorrow better than yesterday.
-           If you would like to work with me,
-           please contact me!`}
-          </ContentText>
-
+          <ContentText>{t("about text")}</ContentText>
           <IconContainer>
             <Envelope />
             <EmptyHeart onClick={onClickHeart} heart={clickHeart} />

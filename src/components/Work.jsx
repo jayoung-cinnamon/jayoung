@@ -4,17 +4,17 @@ import MainText from "./MainText";
 import Project from "./Project";
 import SkillIcon from "./SkillIcon";
 import { Parallax } from "react-scroll-parallax";
+import { useTranslation } from "react-i18next";
 const Work = forwardRef((props, ref) => {
+  const { t } = useTranslation();
   return (
     <Container ref={ref}>
-      <MainText text="Work" />
+      <MainText text={t("work")} />
       <ScreenContainer>
         <Parallax speed={10}>
           <Project
-            text="Happy Bottle"
-            content={`It is an app
-            that keeps happy moments in a bottle.
-            Notes can be read after 30 days.`}
+            text={t("happy bottle")}
+            content={t("happy content")}
             imgUrl={"images/happyBottle2.png"}
             github="https://github.com/jayoung-cinnamon/happybottle"
           />
@@ -27,9 +27,8 @@ const Work = forwardRef((props, ref) => {
         </Parallax>
         <Parallax speed={20}>
           <Project
-            text="Architect Portfolio"
-            content={`A web portfolio site for architects.
-             You can actually see the 3dModeling implemented on this site.`}
+            text={t("architect pf")}
+            content={t("architect content")}
             imgUrl={"images/archi2.png"}
             github="https://github.com/jayoung-cinnamon/archi-portfolio"
           />
@@ -41,10 +40,8 @@ const Work = forwardRef((props, ref) => {
         </Parallax>
         <Parallax speed={30}>
           <Project
-            text="Agenda"
-            content={`This is a project I did at the academy I graduated from.
-            A website where you can manage your prescriptions.`}
-            imgUrl={"images/agenda.png"}
+            text={t("agenda")}
+            content={t("agenda content")}
             github="https://github.com/jayoung-cinnamon/Agenda"
           />
           <SkillContainer>
@@ -56,9 +53,8 @@ const Work = forwardRef((props, ref) => {
         </Parallax>
         <Parallax speed={40}>
           <Project
-            text="Onsoo"
-            content={`This is a project I did at the academy I graduated from.
-            This is a video-based tutoring site.`}
+            text={t("onsoo")}
+            content={t("onsoo content")}
             imgUrl={"images/onsoo.png"}
             github="https://github.com/jayoung-cinnamon/onsoo"
           />

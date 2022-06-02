@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 import { useParallax } from "react-scroll-parallax";
+import { useTranslation } from "react-i18next";
 const LandingPage = () => {
   const eyesRef = useRef(null);
   const { ref } = useParallax({ speed: -20 });
@@ -23,6 +24,7 @@ const LandingPage = () => {
     }
   };
 
+  const { t } = useTranslation();
   return (
     <>
       <Container>
@@ -36,13 +38,10 @@ const LandingPage = () => {
         </EyeContainer>
 
         <MainText>
-          <Text> CREATIVE</Text>
-          <p ref={ref}>{"FRONTEND DEVELOPER."}</p>
-          <Text>BASED IN SEOUL.</Text>
+          <Text> {t("creative")}</Text>
+          <p ref={ref}>{t("frontend developer")}</p>
+          <Text>{t("based in seoul")}</Text>
         </MainText>
-        {/* <ArrowContainer>
-          <Arrow />
-        </ArrowContainer> */}
       </Container>
     </>
   );
@@ -96,16 +95,13 @@ const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    /* ::after {
-      animation: spin 6s normal forwards cubic-bezier(0.06, 0.66, 0.29, 0.17);
-    } */
     align-items: start;
     margin-top: 40px;
-    /* border: 1px solid blue; */
   }
 `;
 
 const MainText = styled.div`
+white-space:nowrap;
   text-align: center;
   font-size: 60px;
   font-weight: 700;
@@ -179,6 +175,7 @@ const Arrow = styled.div`
 `;
 
 const Text = styled.div`
+  white-space: nowrap;
   font-size: 60px;
   font-weight: 700;
   white-space: pre-line;
@@ -189,7 +186,7 @@ const Text = styled.div`
   @media (max-width: 768px) {
     font-size: 30px;
     text-align: left;
-    width: 60%;
+    width: 70%;
   }
 `;
 

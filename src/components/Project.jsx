@@ -55,6 +55,7 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.div`
+  white-space: nowrap;
   font-size: 30px;
   font-weight: 700;
   white-space: pre-line;

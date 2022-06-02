@@ -1,18 +1,20 @@
 import React, { forwardRef } from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import MainText from "./MainText";
 
 const Contact = forwardRef((props, ref) => {
+  const { t } = useTranslation();
   return (
     <Container ref={ref}>
       <Text1>
-        Let's make something <p>cool!</p>
+        {t("make something")}
+        <p>{t("cool")}</p>
       </Text1>
       <Text2>
-        <p>We are</p> gonna
+        <p>{t("we are")}</p> {t("gonna")}
       </Text2>
       <Text3>
-        make a <p>good team</p>:)
+        {t("make")} <p>{t("good team")}</p>:)
       </Text3>
     </Container>
   );
