@@ -42,6 +42,7 @@ const Work = forwardRef((props, ref) => {
           <Project
             text={t("agenda")}
             content={t("agenda content")}
+            imgUrl={"images/agenda.png"}
             github="https://github.com/jayoung-cinnamon/Agenda"
           />
           <SkillContainer>
