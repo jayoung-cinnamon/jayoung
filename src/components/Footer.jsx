@@ -1,9 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Container>
-      <h1>By 2022 jayoung 🌊</h1>
+      <h1>
+        {t("by")} 2022 {t("name")} 🌊
+      </h1>
     </Container>
   );
 };
