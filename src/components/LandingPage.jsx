@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled, { css } from "styled-components";
+import React, { useEffect, useRef } from "react";
+import styled from "styled-components";
 import { useParallax } from "react-scroll-parallax";
 import { useTranslation } from "react-i18next";
 const LandingPage = () => {
@@ -156,22 +156,6 @@ white-space:nowrap;
     }
   }
 
-`;
-
-const ArrowContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
-const Arrow = styled.div`
-  width: 20px;
-  height: 56px;
-  background-image: url("images/curlyArrow.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  bottom: 30px;
-  z-index: 1;
 `;
 
 const Text = styled.div`

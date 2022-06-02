@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import _ from "lodash";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
 import Translation from "./Translation";
 import { useTranslation } from "react-i18next";

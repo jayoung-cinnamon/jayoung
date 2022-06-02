@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { useState, forwardRef } from "react";
 import styled, { css } from "styled-components";
 import { useParallax } from "react-scroll-parallax";
 import { useTranslation } from "react-i18next";
@@ -70,20 +70,6 @@ const ProfileImage = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: 60vh;
-  }
-`;
-
-const TitleText = styled.div`
-  font-size: 30px;
-  line-height: 147%;
-  letter-spacing: 1px;
-  font-weight: 300;
-  text-align: right;
-  color: white;
-  @media (max-width: 768px) {
-    font-size: 20px;
-    text-align: left;
-    width: 60%;
   }
 `;
 
